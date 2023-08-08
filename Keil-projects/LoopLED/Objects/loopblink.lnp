@@ -1,0 +1,3 @@
+".\Objects\main.obj" 
+TO ".\Objects\loopblink" 
+PRINT(".\Listings\loopblink.m51")

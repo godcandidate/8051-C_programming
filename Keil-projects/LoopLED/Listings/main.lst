@@ -1,0 +1,59 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              08/04/2023 21:07:31 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          #define LED P2
+   3          /**
+   4           *  MSDelay - delays in milliseconds
+   5           *  @itime: The time to delay in milliseconds
+   6           *
+   7           *  Return: void
+   8           */
+   9          void MSDelay(unsigned int itime)
+  10          {
+  11   1          unsigned int i,j;
+  12   1          for (i=0;i<itime;i++)
+  13   1              for (j=0;j<1275;j++);
+  14   1      }
+  15          
+  16          void main(void)
+  17          {
+  18   1          unsigned char i;
+  19   1          for(i=0; i<5; i++)
+  20   1          {
+  21   2              LED = 0xFF;
+  22   2              MSDelay(100);
+  23   2              LED = 0X00;
+  24   2              MSDelay(100);
+  25   2          }
+  26   1          
+  27   1          for(i=0; i<5; i++)
+  28   1          {
+  29   2              LED = 0x55;
+  30   2              MSDelay(100);
+  31   2              LED = 0xAA;
+  32   2              MSDelay(100);
+  33   2          }
+  34   1      
+  35   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     77    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

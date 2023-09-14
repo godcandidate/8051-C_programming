@@ -12,6 +12,10 @@ A compilation of practical projects showcasing the application of Keil uVision 5
 
 ### Projects
 
+`LoopLED`
+
+- Interfacing multiple LEDs with 8051 microcontroller
+
 `SwitchWithLED`
 
-Interfacing a switch and a LED with 8051 microcontroller
+- Interfacing a switch and a LED with 8051 microcontroller
